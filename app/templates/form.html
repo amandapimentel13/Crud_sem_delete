@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+#Formulário de cadastro de empresas
+<body>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1>Cadastro</h1>
+    </div>
+#aponta para index página inicial
+    <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/" class="btn btn-info">Voltar</a>
+    </div>
+#formulário de cadastro
+    <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <form name="form" id="form" action="{% if db %}/update/{{db.id}}/{%else%}/create/{% endif %}" method="post">
+        {% csrf_token %}
+        <!--{{form.as_p}}-->
+        <div class="form-group mt-4">Nome: {{form.Nome}}</div>
+        <div class="form-group mt-4">Contato: {{form.Contato}}</div>
+        <div class="form-group mt-4">Telefone: {{form.Telefone}}</div>
+        <input type="submit" class="btn btn-success" value="Salvar">
+    </form>
+    </div>
+</body>
+</html>
