@@ -5,8 +5,8 @@ from app.models import Empresa
 from app.models import Produto
 
 
-# Create your views here.
-# Create your views here.
+# Views
+
 def home(request):
     data = {}
     data['db'] = Empresa.objects.all()

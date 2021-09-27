@@ -1,9 +1,9 @@
 from django.db import models
 
-# Create your models here.
+# Models.
 from django.db import models
 
-# Create your models here.
+# Create models here.
 class Empresa(models.Model):
     Nome = models.CharField(max_length=150)
     Contato = models.CharField(max_length=100)

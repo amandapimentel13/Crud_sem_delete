@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(255, 248, 220);
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.nome-equipe {
+
+    height: 100px;
+    background-color: #234E70;
+    color: #FBF8BE;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 55px;
+
+
+}
+.cadastro {
+    background-color: rgb(27, 26, 26);
+    color: whitesmoke;
+    height: 50px;
+    font-size: 35px;
+    margin-bottom: 30px;
+    padding-top: 5px;
+
+}
+
+.texto {
+    font-size: 20px;
+}

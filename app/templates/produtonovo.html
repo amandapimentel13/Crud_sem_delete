@@ -5,26 +5,25 @@
     <meta charset="UTF-8">
     <title>Formulário</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
 </head>
 
-<!--Formulário de cadastro de empresas-->
+<!--Formulário de cadastro de produtos-->
 <body>
     <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <h1>Cadastro</h1>
+        <h1>Cadastro Produto</h1>
     </div>
-<!--aponta para index página inicial-->
+<!--aponta para home de produtos (formprod)-->
     <div class="col-8 m-auto pt-3 pb-2 text-center">
-        <a href="/" class="btn btn-info">Voltar</a>
+        <a href= homepro class="btn btn-info">Voltar</a>
     </div>
-<!--formulário de cadastro de nova empresa-->
+<!--formulário de cadastro de novo produto-->
     <div class="col-8 m-auto pt-4 pb-2 text-center">
-        <form name="form" id="form" action="{% if db %}/update/{{db.id}}/{%else%}/create/{% endif %}" method="post">
+        <form name="novoproduto" id="novoproduto" action="{% if db %}/updateprod/{{db.id}}/{%else%}/createprod/{% endif %}" method="post">
         {% csrf_token %}
         <!--{{form.as_p}}-->
-        <div class="form-group mt-4">Nome: {{form.Nome}}</div>
-        <div class="form-group mt-4">Contato: {{form.Contato}}</div>
-        <div class="form-group mt-4">Telefone: {{form.Telefone}}</div>
+        <div class="form-group mt-4">Produto: {{form.NomeProd}}</div>
+        <div class="form-group mt-4">Marca: {{form.Marca}}</div>
+        <div class="form-group mt-4">Preço: {{form.Preco}}</div>
         <input type="submit" class="btn btn-success" value="Salvar">
     </form>
     </div>

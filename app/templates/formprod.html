@@ -8,25 +8,54 @@
 </head>
 
 <body>
-<!--lista de produtos-->
+<!--cadastrar novo produto-->
     <div class="col-8 m-auto pt-2 pb-2 text-center">
         <h1>Produtos cadastrados</h1>
-        <a href="/empresa/{{empresa_ip}}/produto/novo">Cadastrar novo produto da empresa</a>
+        <a href="/empresa/{{empresa_ip}}/produto/novo" class="btn btn-success">Cadastrar novo produto da empresa</a>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!--tabela com lista de produtos-->
     <div class="col-8 m-auto pt-4 pb-2 text-center">
         <table class="table">
           <thead class="thead-dark">
             <tr>
-              <!--<th scope="col">#</th>-->
+              <th scope="col">ID</th>
               <th scope="col">Produto</th>
               <th scope="col">Marca</th>
-              <th scope="col">Preco</th>
+              <th scope="col">Preço</th>
+              <th scope="col">Ações</th>
             </tr>
           </thead>
           <tbody>
-            {% for dbs in db %}
+          <tr>
+              <th scope="row">4</th>
+              <td>Arroz</td>
+              <td>Camil</td>
+              <td>10,00</td>
+                <td>
+                    <a href="/editprod/{{dbs.id}}/" class="btn btn-primary">Editar</a>
+                    <a href="deleteprod/{{dbs.id}}/" class="btn btn-danger">Deletar</a>
+                </td>
+            </tr>
+
+            <!--{% for dbs in db %}
             <tr>
               <th>{{dbs.id}}</th>
                 <td>{{dbs.NomeProd}}</td>
@@ -37,7 +66,7 @@
                     <a href="deleteprod/{{dbs.id}}/" class="btn btn-danger">Deletar</a>
                 </td>
               </tr>
-          {% endfor %}
+          {% endfor %}-->
           </tbody>
         </table>
     </div>

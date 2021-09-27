@@ -27,7 +27,10 @@ urlpatterns = [
     path('edit/<int:pk>/', edit, name='edit'),
     path('update/<int:pk>/', update, name='update'),
     path('delete/<int:pk>/', delete, name='delete'),
-    path('viewprod/<int:fk>/', viewprod, name='viewprod'),
+
+    #path('createprod/', createprod, name='createprod'),
+    #path('viewprod/<int:fk>/', viewprod, name='viewprod'),
+    #path('updateprod/<int:pk>/', updateprod, name='updateprod'),
     path('empresa/<int:empresa_ip>/produtos/', homepro, name='homepro'),
     path('empresa/<int:empresa_ip>/produtos/novo', novoproduto, name='novoproduto'),
 
