@@ -10,7 +10,7 @@
 <!--Formulário de cadastro de empresas-->
 <body>
     <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <h1>Cadastro</h1>
+        <h1>Dados produto</h1>
     </div>
 <!--aponta para index página inicial-->
     <div class="col-8 m-auto pt-3 pb-2 text-center">
@@ -18,14 +18,9 @@
     </div>
 <!--formulário de cadastro-->
     <div class="col-8 m-auto pt-4 pb-2 text-center">
-        <form name="form" id="form" action="{% if db %}/update/{{db.id}}/{%else%}/create/{% endif %}" method="post">
-        {% csrf_token %}
-        <!--{{form.as_p}}-->
-        <div class="form-group mt-4">Nome: {{form.Nome}}</div>
-        <div class="form-group mt-4">Contato: {{form.Contato}}</div>
-        <div class="form-group mt-4">Telefone: {{form.Telefone}}</div>
-        <input type="submit" class="btn btn-success" value="Salvar">
-    </form>
+        <strong>Nome: </strong>{{db.NomeProd}}<br>
+        <strong>Marca: </strong>{{db.Marca}}<br>
+        <strong>Preço: </strong>{{db.Preco}}<br>
     </div>
 </body>
 </html>

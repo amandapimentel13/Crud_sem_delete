@@ -3,21 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Magazine Womans Squad</title>
+    <title> <Code> Women Squad</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
-#Lista de empresa
+<!--Lista de empresa-->
 <body>
     <div class="col-8 m-auto pt-2 pb-2 text-center">
-        <h1>Magazine Womans Squad</h1>
+        <h1>Magazine Women Squad</h1>
     </div>
-#aponta para o formulário form
+<!--chama o formulário form com os dados da empresa-->
     <div class="col-8 m-auto pt-3 pb-2 text-center">
         <a href="/form" class="btn btn-success">Adicionar</a>
     </div>
 
-#tabela com lista de empresa
+<!--tabela com lista de empresa-->
     <div class="col-8 m-auto pt-4 pb-2 text-center">
         <table class="table">
           <thead class="thead-dark">
@@ -37,10 +37,10 @@
                 <td>{{dbs.Contato}}</td>
                 <td>{{dbs.Telefone}}</td>
                 <td>
-                    <a href="/view/{{dbs.id}}/" class="btn btn-dark">Produtos</a>
+                    <a href="/empresa/{{dbs.id}}/produtos/" class="btn btn-dark">Produtos</a>
                     <a href="/view/{{dbs.id}}/" class="btn btn-dark">Visualizar</a>
                     <a href="/edit/{{dbs.id}}/" class="btn btn-primary">Editar</a>
-                    <a href="" class="btn btn-danger">Deletar</a>
+                    <a href="/delete/{{dbs.id}}/" class="btn btn-danger">Deletar</a>
                 </td>
               </tr>
           {% endfor %}
